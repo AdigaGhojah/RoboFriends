@@ -22,6 +22,14 @@ class App extends React.Component {
         .then(response =>response.json())
         .then(users=>this.setState({ robots: users })
         )
+        fetch('https://example.com/',{
+            mode: 'cors',
+        })
+        .then(response =>{
+            console.log(response.json());
+            })
+        
+        
     }
 
     render() {
@@ -33,6 +41,7 @@ class App extends React.Component {
             <div className='tc'>
 
                 <h1 className='f1'>RoboFirends</h1>
+
                 <SearchBox onSearchChange={this.onSearchChange} />
                 <Scroll>
                     <ErrorBoundry>

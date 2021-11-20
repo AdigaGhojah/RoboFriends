@@ -11,8 +11,6 @@ class CardList extends React.Component {
         });
     }
     render() {
-        if(true)
-        throw new Error('NOOOOOOOOOOOOO')
         const robots = this.props.robots;
         return (
             (!robots.length) ?
